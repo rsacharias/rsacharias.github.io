@@ -1,0 +1,104 @@
+:root {
+  --bg-body-clr: hsl(217, 54%, 11%);
+  --bg-card-clr: hsl(216, 50%, 16%);
+  --line-clr: hsl(215, 32%, 27%);
+  --text-clr-white: hsl(0, 0%, 100%);
+  --text-clr-soft-blue: hsl(215, 51%, 70%);
+  --ff: Outfit, sans-serif;
+  --fs: 18px;
+  --fw1: 300;
+  --fw2: 400;
+  --fw3: 600;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  background-color: var(--bg-body-clr);
+  font-family: var(--ff);
+  color: var(--text-clr-white);
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: var(--fw3);
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: var(--fw1);
+  line-height: 1.5em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 1.5em;
+  border-radius: 15px;
+  background-color: var(--bg-card-clr);
+  box-shadow: 0 20px 0px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-img {
+  border-radius: 7px;
+  margin-bottom: 0.5em;
+}
+
+.content {
+  border-bottom: 2px solid var(--line-clr);
+  margin-bottom: 6px;
+}
+
+.content > p {
+  margin-bottom: 0;
+}
+
+.assets, .card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.assets > p, .card-footer > p {
+  font-size: 1.0rem;
+}
+
+.assets p:not(.soft-blue-text) {
+  font-weight: var(--fw3);
+}
+
+
+.assets .icon {
+  position: relative; /* to get the icons on the baseline without using flex again */
+  top: 3px;
+  margin-right: 0.5em;
+}
+
+.card-footer {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-footer p {
+  margin-left: 1em;
+}
+
+.avatar {
+  border: 1px white solid;
+  border-radius: 50%;
+}
+
+.soft-blue-text {
+  color: var(--text-clr-soft-blue);
+}
+
+.wrapper {
+  box-shadow: 0 0 20px 30px rgba(0, 0, 0, 0.05);
+}
